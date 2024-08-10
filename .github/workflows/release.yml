@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: windows_client.zip
-          path: .
+          path: windows_client.zip
 
       - name: Build linux ck-client
         run: |
@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: linux_client.zip
-          path: .
+          path: linux_client.zip
 
   macos_build:
     runs-on: macos-latest
@@ -101,7 +101,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: macos_client.zip
-          path: .
+          path: macos_client.zip
 
   release:
     runs-on: ubuntu-latest
@@ -129,10 +129,6 @@ jobs:
         with:
           name: macos_client.zip
           path: release
-      - name: check
-        run: |
-          ls
-          ls release
       
       - name: Release
         uses: softprops/action-gh-release@v1
