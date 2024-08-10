@@ -129,6 +129,10 @@ jobs:
         with:
           name: macos_client.zip
           path: release
+      - name: check
+        run: |
+          ls
+          ls release
       
       - name: Release
         uses: softprops/action-gh-release@v1
